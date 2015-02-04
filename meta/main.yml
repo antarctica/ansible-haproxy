@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  description: Installs the HA Proxy load balancer and reverse proxy
+  author: British Antarctic Survey - Web and Applications Team
+  company: British Antarctic Survey
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+  - name: Ubuntu
+      - trusty
+  categories:
+  - web
+
+armadillo_info:
+  name: HA Proxy
+  version: 0.1.0
+  source: git@stash.ceh.ac.uk:7999/barc/haproxy.git
+  dependencies:
+  - git@stash.ceh.ac.uk:7999/barc/core.git#v0.7.2
+
+dependencies:
+  - core

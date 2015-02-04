@@ -1,0 +1,15 @@
+---
+# Configure VM for stack installation / app deployment
+
+- name: install ha-proxy PPA
+  apt_repository: repo='ppa:vbernat/haproxy-1.5' state=present update_cache=yes
+
+- name: install ha-proxy
+  apt: update_cache=yes pkg={{ item }} state=present # won't update if done under an hour ago
+  with_items:
+    - haproxy
+
+- name: assemble config
+  assemble: src={{ haproxy_configuration_directory }} remote_src=False dest=/etc/haproxy/haproxy.cfg delimiter='   ' owner=root group=root mode=644
+  notify:
+    - Restart HAPROXY
