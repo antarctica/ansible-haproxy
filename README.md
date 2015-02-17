@@ -24,6 +24,10 @@ This role is designed for internal use but if useful can be shared publicly.
 
 ### Variables
 
+* `haproxy_configuration_assemble`
+    * If "True" the role should assemble configuration files into a HA proxy configuration file
+    * If you need to perform tasks such as templating before a configuration file can be made, set to "False"
+    * Default: "True"
 * `haproxy_configuration_directory`
     * Relative path to directory containing HA proxy configuration files
     * Files are relative to the `files` directory in this role

@@ -1,4 +1,5 @@
 ---
 # Default variables - inventory or playbook overrides will be respected
 
+haproxy_configuration_assemble: True
 haproxy_configuration_directory: 'configs/defaults'
