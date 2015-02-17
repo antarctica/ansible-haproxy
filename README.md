@@ -7,7 +7,7 @@ Installs the HA Proxy load balancer and reverse proxy
 ## Overview
 
 * Installs HA Proxy.
-* Creates HA Proxy configuration file by assembling a set of configuration files together.
+* Optionally creates HA Proxy configuration file by assembling a set of configuration files together.
 * Provides a default set of configuration files which aren't useful but demonstrate the various HA concepts.
  
 ## Availability
