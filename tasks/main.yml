@@ -13,3 +13,4 @@
   assemble: src={{ haproxy_configuration_directory }} remote_src=False dest=/etc/haproxy/haproxy.cfg delimiter='   ' owner=root group=root mode=644
   notify:
     - Restart HAPROXY
+  when: haproxy_configuration_assemble == True
