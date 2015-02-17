@@ -7,7 +7,7 @@ Installs the HA Proxy load balancer and reverse proxy
 ## Overview
 
 * Installs HA Proxy.
-* Creates HA Proxy configuration file by assembling a set of configuration files together.
+* Optionally creates HA Proxy configuration file by assembling a set of configuration files together.
 * Provides a default set of configuration files which aren't useful but demonstrate the various HA concepts.
  
 ## Availability
@@ -24,6 +24,10 @@ This role is designed for internal use but if useful can be shared publicly.
 
 ### Variables
 
+* `haproxy_configuration_assemble`
+    * If "True" the role should assemble configuration files into a HA proxy configuration file
+    * If you need to perform tasks such as templating before a configuration file can be made, set to "False"
+    * Default: "True"
 * `haproxy_configuration_directory`
     * Relative path to directory containing HA proxy configuration files
     * Files are relative to the `files` directory in this role
